@@ -1,0 +1,9 @@
+<filesMatch "\.(json|js)$">
+fileETag None
+<ifModule mod_headers.c>
+header unset ETag
+header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+header set Pragma "no-cache"
+</ifModule>
+
+</filesMatch>
